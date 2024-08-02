@@ -348,6 +348,13 @@
   dependencies:
     "@tauri-apps/api" "^2.0.0-beta.16"
 
+"@tauri-apps/plugin-positioner@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-positioner/-/plugin-positioner-2.0.0-beta.8.tgz#cad4c146b5a91dc00366ec08b8481868c4a84414"
+  integrity sha512-g62FHh+SVPQLAtJNbCumxX2ny9TfmAefNHGJwJ8g8GR1GaoXnoNN7jgl4rzwf+W4wC+UnKNzP2iXSjY0MPixxw==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
 "@tauri-apps/plugin-store@^2.0.0-beta.8":
   version "2.0.0-beta.8"
   resolved "https://registry.npmmirror.com/@tauri-apps/plugin-store/-/plugin-store-2.0.0-beta.8.tgz#1affba657f0554cbcd256c021ce0368bf2ddb36d"

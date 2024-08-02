@@ -1,6 +1,10 @@
 use tauri::Emitter;
 use tauri_plugin_autostart::{MacosLauncher, ManagerExt};
 
+use crate::system::mail_tray::build_tray;
+
+mod system;
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -17,6 +21,7 @@ pub fn run() {
         .plugin(tauri_plugin_fs::init())
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_clipboard_manager::init())
+        .plugin(tauri_plugin_positioner::init())
         .plugin(tauri_plugin_autostart::init(
             MacosLauncher::LaunchAgent,
             Some(vec!["--flag1", "--flag2"]),
@@ -26,6 +31,7 @@ pub fn run() {
             let autostart_manager = app.autolaunch();
             // 启用 autostart
             let _ = autostart_manager.enable();
+            let _ = build_tray(app)?;
             Ok(())
         })
         .run(tauri::generate_context!())
