@@ -9,8 +9,8 @@
       :width="300"
     >
       <div class="column" style="height: 100%">
-        <div class="row" style="height: 80px">
-          <q-item clickable v-ripple class="q-pa-sm">
+        <div class="row" style="height: 80px; width: 100%">
+          <q-item clickable v-ripple class="q-pa-sm" style="width: 100%">
             <q-item-section side>
               <q-avatar rounded size="50px">
                 <img src="https://cdn.quasar.dev/img/avatar.png" />
@@ -20,9 +20,9 @@
               </q-avatar>
             </q-item-section>
             <q-item-section class="q-ma-none" style="margin-top: 0px">
-              <q-item-label style="font-size: 22px; font-weight: 500"
-                >Dr.Guo</q-item-label
-              >
+              <q-item-label style="font-size: 22px; font-weight: 500">{{
+                userName
+              }}</q-item-label>
               <q-item-label>
                 <q-badge color="warning" class="q-mr-xs">
                   12 <q-icon name="star" color="white" class="q-ml-xs" />
@@ -140,6 +140,7 @@ export default {
     const starMessage = ref(false);
     const flagMessage = ref(false);
     const notificationMessage = ref(false);
+    const userName = ref("Dr.Guo");
     const mailAccounts = ref([
       {
         name: "Private",
@@ -201,6 +202,7 @@ export default {
       notificationMessage,
       mailAccounts,
       commonFolders,
+      userName,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
