@@ -1,9 +1,14 @@
+use std::sync::OnceLock;
+
 use tauri::Emitter;
 use tauri_plugin_autostart::{MacosLauncher, ManagerExt};
 
+use crate::system::mail_pathes::{app_path_initial, SysPath};
 use crate::system::mail_tray::build_tray;
 
 mod system;
+
+pub static SYS_PATH: OnceLock<SysPath> = OnceLock::new();
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -27,6 +32,7 @@ pub fn run() {
             Some(vec!["--flag1", "--flag2"]),
         ))
         .setup(|app| {
+            SYS_PATH.get_or_init(|| app_path_initial().unwrap());
             // Get the autostart manager
             let autostart_manager = app.autolaunch();
             // 启用 autostart
