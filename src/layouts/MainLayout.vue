@@ -41,15 +41,14 @@
         <div class="col q-pt-sm">
           <q-list class="rounded-borders">
             <q-expansion-item
-              dense
-              dense-toggle
               expand-separator
+              default-opened
               icon="perm_identity"
               label="Accounts"
               header-class="text-primary text-weight-bold "
             >
               <q-card>
-                <q-card-section class="q-pl-sm q-pt-none q-pr-none q-pb-none">
+                <q-card-section class="q-pl-sm q-pt-none q-pr-none q-pb-md">
                   <q-list dense>
                     <q-item
                       clickable
@@ -73,38 +72,45 @@
             </q-expansion-item>
 
             <q-expansion-item
-              dense
-              dense-toggle
               expand-separator
+              default-opened
               icon="folder"
               label="Folders"
               header-class="text-secondary text-weight-bold"
             >
               <q-card>
-                <q-card-section>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quidem, eius reprehenderit eos corrupti commodi magni quaerat
-                  ex numquam, dolorum officiis modi facere maiores architecto
-                  suscipit iste eveniet doloribus ullam aliquid.
+                <q-card-section class="q-pl-sm q-pt-none q-pr-none q-pb-md">
+                  <q-list dense>
+                    <q-item
+                      clickable
+                      class="q-pa-none q-ma-none"
+                      v-ripple
+                      v-for="folder in commonFolders"
+                      :key="folder.name"
+                    >
+                      <q-item-section>
+                        <div class="row">
+                          <q-icon class="col-2" :name="folder.avatar" />
+                          <div class="col-10 text-weight-bold">
+                            {{ folder.name }}
+                          </div>
+                        </div>
+                      </q-item-section>
+                    </q-item>
+                  </q-list>
                 </q-card-section>
               </q-card>
             </q-expansion-item>
 
             <q-expansion-item
-              dense
-              dense-toggle
               expand-separator
-              icon="notifications_active"
-              label="Notifycation"
+              default-opened
+              icon="schedule"
+              label="Recent"
               header-class="text-purple text-weight-bold"
             >
               <q-card>
-                <q-card-section>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quidem, eius reprehenderit eos corrupti commodi magni quaerat
-                  ex numquam, dolorum officiis modi facere maiores architecto
-                  suscipit iste eveniet doloribus ullam aliquid.
-                </q-card-section>
+                <q-card-section> </q-card-section>
               </q-card>
             </q-expansion-item>
           </q-list>
@@ -154,6 +160,38 @@ export default {
         notificationMessage: 12,
       },
     ]);
+    const commonFolders = ref([
+      {
+        name: "VIP",
+        avatar: "hotel_class",
+        message: 5,
+      },
+      {
+        name: "Pin",
+        avatar: "pin_drop",
+        message: 5,
+      },
+      {
+        name: "To-Do",
+        avatar: "check_box",
+        message: 6,
+      },
+      {
+        name: "Sent",
+        avatar: "send",
+        message: 5,
+      },
+      {
+        name: "Craft",
+        avatar: "draw",
+        message: 15,
+      },
+      {
+        name: "Archived",
+        avatar: "archive",
+        message: 3,
+      },
+    ]);
 
     return {
       leftDrawerOpen,
@@ -162,6 +200,7 @@ export default {
       flagMessage,
       notificationMessage,
       mailAccounts,
+      commonFolders,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
@@ -171,7 +210,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.column > div
 .column + .column
   margin-top: 1rem
 
