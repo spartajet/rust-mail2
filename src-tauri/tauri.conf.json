@@ -1,7 +1,7 @@
 {
   "productName": "rust-mail2",
   "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.spartajet.rust-mail",
   "build": {
     "frontendDist": "../dist/spa",
     "devUrl": "http://localhost:9000",
@@ -12,8 +12,8 @@
     "windows": [
       {
         "title": "Rust Mail",
-        "width": 800,
-        "height": 600,
+        "width": 1200,
+        "height": 800,
         "resizable": true,
         "fullscreen": false
       }
@@ -31,6 +31,9 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
+    ],
+    "resources": [
+      "resources/*"
     ]
   },
   "$schema": "../node_modules/@tauri-apps/cli/schema.json"

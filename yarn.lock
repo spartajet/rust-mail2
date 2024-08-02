@@ -228,6 +228,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@tauri-apps/api@^2.0.0-beta.16":
+  version "2.0.0-beta.16"
+  resolved "https://registry.npmmirror.com/@tauri-apps/api/-/api-2.0.0-beta.16.tgz#c207ca8cd10938449da014f75910531ea435bc0e"
+  integrity sha512-YGjkR9HxS/YyIoqoXDkk8o9Yy5NW6u9YxzeqEodwwOUoeS0nac6mzLTW3VYIuSelHmyUQCgbyENVY6e5CJXA4Q==
+
 "@tauri-apps/cli-darwin-arm64@2.0.0-beta.23":
   version "2.0.0-beta.23"
   resolved "https://registry.npmmirror.com/@tauri-apps/cli-darwin-arm64/-/cli-darwin-arm64-2.0.0-beta.23.tgz#d105a1c3b35293c55c1a680a4d4e2b9b81ff2b49"
@@ -293,6 +298,76 @@
     "@tauri-apps/cli-win32-arm64-msvc" "2.0.0-beta.23"
     "@tauri-apps/cli-win32-ia32-msvc" "2.0.0-beta.23"
     "@tauri-apps/cli-win32-x64-msvc" "2.0.0-beta.23"
+
+"@tauri-apps/plugin-autostart@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-autostart/-/plugin-autostart-2.0.0-beta.8.tgz#1c3d0ed542113fe14d7b391638c277db8a388072"
+  integrity sha512-bM+9L9PdSwy2PUhNlCRYAiLTY6t8bKRcO4ZX13ycLPS1yZrFIoSZCic1n7Sw4uZ185h3g3SlSUQyplwhQQ4bmg==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-clipboard-manager@^2.1.0-beta.6":
+  version "2.1.0-beta.6"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-clipboard-manager/-/plugin-clipboard-manager-2.1.0-beta.6.tgz#70d8c85e79939ea55896bed3a4e8f0ecf36eb6eb"
+  integrity sha512-MBuoVXPcq1yab4z6DGx7D44ntvr21taoozJnf1IHeXg864MnlCPeZj6fuDm+vF2o+3ac2sSZDZmo6PvrkLC8lQ==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-dialog@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-dialog/-/plugin-dialog-2.0.0-beta.8.tgz#1c9ac0b9c8eadd866e064a7793bc3576bbc121ae"
+  integrity sha512-6iVhEBceWYLUgX6ygBc4/yJ1o/D4YwgoAGt7ebFUTjEyIhp79PeFtE8OTjdyJbtVOc6bAcDeAn4+pbWtSw9/4w==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-fs@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-fs/-/plugin-fs-2.0.0-beta.8.tgz#83665e05f2d54288836ca876dc1a3c42dfd22fdc"
+  integrity sha512-m0lLmEIHL6J+dH6A1lgIwQ7JYArgTlZORhUcl2xzeef18llMp6Gjs272jCMRAnYEREhu7Wd3zk7PxSR+DsLXYg==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-global-shortcut@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-global-shortcut/-/plugin-global-shortcut-2.0.0-beta.8.tgz#84f5c20bd38ac8e4cf981bca2ba07b8959aeec87"
+  integrity sha512-0267UgJhmJX1Hv96wHTmEznBgIVCmB5Me+umDWeNe5+3NUgSQsZgtJY6/M7AOpaalRkazCx9DMcNHeMhpLItQA==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-log@^2.0.0-beta.9":
+  version "2.0.0-beta.9"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-log/-/plugin-log-2.0.0-beta.9.tgz#83150e8f18ee77ec9fe9a0fab3a8e18c6a59db13"
+  integrity sha512-/nymduVti2r9OKXkjLGr1ByHBOzbPglsAvnmFaPUPmIwvY+ZYZaE7yBYYVGXE0rwkVE5pdXPeC5X5gY/UlAOVw==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-os@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-os/-/plugin-os-2.0.0-beta.8.tgz#26ef9f455f522594ffb5d6c33837c90deb7adeee"
+  integrity sha512-1685HUe4tGePalYfCWRKaTcLLCVIFyqyO7IMDiMNq23jT+LMJmd8xRBn/d3fDH3NLaI1r52RDpIOrnLx0XU6cw==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-store@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-store/-/plugin-store-2.0.0-beta.8.tgz#1affba657f0554cbcd256c021ce0368bf2ddb36d"
+  integrity sha512-GXTEUT0O6Kg5lo6bpC1tuler4DZimeCF9C0ciN+aZft8PmApyKOaNU3aXmiplrzEytbQ96BdsFTSrsCnlpO6Cw==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-stronghold@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-stronghold/-/plugin-stronghold-2.0.0-beta.8.tgz#f64c9d22713342b06e247a325b4948c3dee51d72"
+  integrity sha512-+PXqWimRUpwGWg6bA0z14Mwg8XX02QSyTxSRNrGK9uX3uzrrcnV1KAFwa670RocDLGGhc6yjpxjqGPJNnLBoGg==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
+
+"@tauri-apps/plugin-updater@^2.0.0-beta.8":
+  version "2.0.0-beta.8"
+  resolved "https://registry.npmmirror.com/@tauri-apps/plugin-updater/-/plugin-updater-2.0.0-beta.8.tgz#f7f299a33dfcb5f5dc5e19a47e71266b65585106"
+  integrity sha512-qKHOYKC6vlYWggUwi/D6kPdyflsNgjTnHMr5YmBjqBST54rl999bKYfeY+ICKiDF6XtV0nezJTFFjcPk9vx16A==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0-beta.16"
 
 "@types/body-parser@*":
   version "1.19.5"

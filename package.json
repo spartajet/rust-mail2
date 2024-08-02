@@ -14,6 +14,16 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
+    "@tauri-apps/plugin-autostart": "^2.0.0-beta.8",
+    "@tauri-apps/plugin-clipboard-manager": "^2.1.0-beta.6",
+    "@tauri-apps/plugin-dialog": "^2.0.0-beta.8",
+    "@tauri-apps/plugin-fs": "^2.0.0-beta.8",
+    "@tauri-apps/plugin-global-shortcut": "^2.0.0-beta.8",
+    "@tauri-apps/plugin-log": "^2.0.0-beta.9",
+    "@tauri-apps/plugin-os": "^2.0.0-beta.8",
+    "@tauri-apps/plugin-store": "^2.0.0-beta.8",
+    "@tauri-apps/plugin-stronghold": "^2.0.0-beta.8",
+    "@tauri-apps/plugin-updater": "^2.0.0-beta.8",
     "quasar": "^2.16.0",
     "vue": "^3.4.18",
     "vue-router": "^4.0.12"
