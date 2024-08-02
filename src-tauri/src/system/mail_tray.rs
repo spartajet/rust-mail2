@@ -7,7 +7,8 @@ use tauri::tray::{MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent}
 
 pub fn build_tray(app: &mut App) -> Result<(), Box<dyn Error>> {
     let toggle = MenuItemBuilder::with_id("refresh", "Refresh").build(app)?;
-    let menu = MenuBuilder::new(app).items(&[&toggle]).build()?;
+    let new_mail = MenuItemBuilder::with_id("new_mail", "New Mail").build(app)?;
+    let menu = MenuBuilder::new(app).items(&[&toggle, &new_mail]).build()?;
     let _tray = TrayIconBuilder::new()
         .menu(&menu)
         .icon(Image::from_path("./icons/icon.png")?)
