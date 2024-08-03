@@ -6,11 +6,11 @@
       side="left"
       behavior="desktop"
       bordered
-      :width="300"
+      :width="220"
     >
       <div class="column" style="height: 100%">
-        <div class="row" style="height: 80px; width: 100%">
-          <q-item clickable v-ripple class="q-pa-sm" style="width: 100%">
+        <div class="row" style="height: 80px; width: 95%">
+          <q-item clickable v-ripple class="q-pa-sm" style="width: 95%">
             <q-item-section side>
               <q-avatar rounded size="50px">
                 <img src="https://cdn.quasar.dev/img/avatar.png" />
@@ -101,7 +101,14 @@
                 </q-card-section>
               </q-card>
             </q-expansion-item>
-
+            <q-expansion-item
+              expand-separator
+              default-opened
+              icon="calendar_month"
+              label="Calendar"
+              header-class="text-primary text-weight-bold"
+            >
+            </q-expansion-item>
             <q-expansion-item
               expand-separator
               default-opened
@@ -136,11 +143,13 @@
 import { ref } from "vue";
 import SettingPage from "src/pages/SettingPage.vue";
 import AddAccount from "src/pages/AddAccount.vue";
+import MailListPage from "src/pages/MailListPage.vue";
 
 export default {
   components: {
     SettingPage,
     AddAccount,
+    // MailListPage,
   },
   setup() {
     const leftDrawerOpen = ref(true);
