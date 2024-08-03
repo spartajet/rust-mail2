@@ -128,12 +128,20 @@
       </div>
     </q-page-container>
   </q-layout>
+  <SettingPage />
+  <AddAccount />
 </template>
 
 <script>
 import { ref } from "vue";
+import SettingPage from "src/pages/SettingPage.vue";
+import AddAccount from "src/pages/AddAccount.vue";
 
 export default {
+  components: {
+    SettingPage,
+    AddAccount,
+  },
   setup() {
     const leftDrawerOpen = ref(true);
     const newMessageCount = ref(3);
