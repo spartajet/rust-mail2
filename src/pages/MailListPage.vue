@@ -7,6 +7,29 @@
       bordered
       :width="300"
     >
+      <q-input
+        outlined
+        bottom-slots
+        label="search anything"
+        stack-label
+        dense
+        class="q-ma-xs"
+      >
+        <template v-slot:prepend>
+          <q-icon name="place" />
+        </template>
+
+        <template v-slot:control>
+          <div class="self-left full-width no-outline" tabindex="0">
+            {{ text }}
+          </div>
+        </template>
+
+        <template v-slot:append>
+          <q-icon name="close" class="cursor-pointer" />
+          <q-icon name="search" />
+        </template>
+      </q-input>
       <q-pull-to-refresh @refresh="refresh">
         <q-item v-for="n in 20" :key="n">
           <q-item-section avatar>
@@ -26,15 +49,19 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <MailDetailPage />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
 import { ref } from "vue";
+import MailDetailPage from "src/pages/MailDetailPage.vue";
 
 export default {
+  components: {
+    MailDetailPage,
+  },
   setup() {
     const leftDrawerOpen = ref(true);
 
