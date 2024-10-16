@@ -36,11 +36,9 @@ import { ref } from "vue";
 export default {
   setup() {
     const leftDrawerOpen = ref(true);
-    const displayDialog = ref(false);
-
+    const displayDialog = ref(true);
     return {
       leftDrawerOpen,
-      displayDialog,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },

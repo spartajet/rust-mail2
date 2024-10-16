@@ -6,17 +6,34 @@
       side="left"
       behavior="desktop"
       bordered
-      :width="220"
+      :width="250"
     >
       <div class="column" style="height: 100%">
-        <div class="row" style="height: 80px; width: 95%">
-          <q-item clickable v-ripple class="q-pa-sm" style="width: 95%">
+        <div class="row" style="height: 80px; width: 100%">
+          <q-item clickable v-ripple class="q-pa-sm" style="width: 100%">
             <q-item-section side>
               <q-avatar rounded size="50px">
                 <img src="https://cdn.quasar.dev/img/avatar.png" />
                 <q-badge floating color="primary">{{
                   newMessageCount
                 }}</q-badge>
+                <q-menu>
+                  <q-list style="min-width: 100px">
+                    <q-item clickable v-close-popup>
+                      <q-item-section @click="toggleSetting"
+                        >Setting</q-item-section
+                      >
+                    </q-item>
+                    <q-separator />
+                    <q-item clickable v-close-popup>
+                      <q-item-section>Add Account</q-item-section>
+                    </q-item>
+                    <q-separator />
+                    <q-item clickable v-close-popup>
+                      <q-item-section>Exit</q-item-section>
+                    </q-item>
+                  </q-list>
+                </q-menu>
               </q-avatar>
             </q-item-section>
             <q-item-section class="q-ma-none" style="margin-top: 0px">
@@ -60,7 +77,10 @@
                       <q-item-section>
                         <div class="row">
                           <q-icon class="col-2" :name="account.avatar" />
-                          <div class="col-10 text-weight-bold">
+                          <div
+                            class="col-10 text-weight-bold"
+                            style="width: 100%"
+                          >
                             {{ account.account }}
                           </div>
                         </div>
@@ -135,7 +155,7 @@
       </div>
     </q-page-container>
   </q-layout>
-  <SettingPage />
+  <SettingPage ref="SettingRef" />
   <AddAccount />
 </template>
 
@@ -158,6 +178,7 @@ export default {
     const flagMessage = ref(false);
     const notificationMessage = ref(false);
     const userName = ref("Dr.Guo");
+    const displayDialog = ref(false);
     const mailAccounts = ref([
       {
         name: "Private",
@@ -220,8 +241,12 @@ export default {
       mailAccounts,
       commonFolders,
       userName,
+      displayDialog,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+      toggleSetting() {
+        SettingRef.displayDialog = true;
       },
     };
   },
