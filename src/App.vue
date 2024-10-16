@@ -1,9 +1,11 @@
 <template>
-  <router-view />
+  <v-app>
+    <v-main>
+      <HelloWorld />
+    </v-main>
+  </v-app>
 </template>
 
-<script setup>
-defineOptions({
-  name: 'App'
-});
+<script setup lang="ts">
+  //
 </script>

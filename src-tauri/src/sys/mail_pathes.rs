@@ -1,8 +1,9 @@
+use crate::sys::mail_const;
 use std::path::PathBuf;
 
 use directories::ProjectDirs;
 
-use crate::system::mail_const::{APP_CACHE, APP_CONFIG, APP_DATA, APP_LOG, APP_NAME, ORG_DOMAIN, ORG_NAME};
+use crate::sys::mail_const::{APP_CACHE, APP_CONFIG, APP_DATA, APP_LOG, APP_NAME, ORG_DOMAIN, ORG_NAME};
 
 #[derive(Debug, Clone)]
 pub struct SysPath {
@@ -36,7 +37,7 @@ pub fn app_path_initial() -> Option<SysPath> {
         if app_cache_path.exists() == false {
             std::fs::create_dir_all(&app_cache_path).unwrap();
         }
-        let app_database_file = app_data_path.join(crate::system::mail_const::APP_DATABASE_FILE);
+        let app_database_file = app_data_path.join(mail_const::APP_DATABASE_FILE);
         Some(SysPath {
             app_path: app_dir,
             app_data_path,

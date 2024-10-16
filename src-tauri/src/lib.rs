@@ -1,9 +1,9 @@
 use std::sync::OnceLock;
 
-use crate::system::mail_pathes::{app_path_initial, SysPath};
-use crate::system::mail_tray::build_tray;
+use crate::sys::mail_pathes::{app_path_initial, SysPath};
+use crate::sys::mail_tray::build_tray;
 
-mod system;
+mod sys;
 
 pub static SYS_PATH: OnceLock<SysPath> = OnceLock::new();
 
