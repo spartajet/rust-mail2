@@ -6,6 +6,8 @@
     "linux"
   ],
   "permissions": [
-    "global-shortcut:default"
+    "global-shortcut:default",
+    "fs:allow-app-read-recursive",
+    "fs:allow-app-write-recursive"
   ]
 }

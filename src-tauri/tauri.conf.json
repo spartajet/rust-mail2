@@ -13,8 +13,8 @@
     "windows": [
       {
         "title": "Rust Mail",
-        "width": 800,
-        "height": 600,
+        "width": 1800,
+        "height": 1000,
         "resizable": true,
         "fullscreen": false
       }
