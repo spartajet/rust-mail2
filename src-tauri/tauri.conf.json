@@ -12,11 +12,9 @@
   "app": {
     "windows": [
       {
-        "title": "Rust Mail",
         "width": 1800,
         "height": 1000,
-        "resizable": false,
-        "fullscreen": false
+        "decorations": false
       }
     ],
     "security": {

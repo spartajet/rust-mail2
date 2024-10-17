@@ -15,5 +15,6 @@ declare module 'vue' {
     MailListPage: typeof import('./src/components/MailListPage.vue')['default']
     MainLayout: typeof import('./src/components/MainLayout.vue')['default']
     SettingPage: typeof import('./src/components/SettingPage.vue')['default']
+    UserInfo: typeof import('./src/components/UserInfo.vue')['default']
   }
 }
