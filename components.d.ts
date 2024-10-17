@@ -12,6 +12,7 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IndexPage: typeof import('./src/components/IndexPage.vue')['default']
     MailDetailPage: typeof import('./src/components/MailDetailPage.vue')['default']
+    MailList: typeof import('./src/components/MailList.vue')['default']
     MailListPage: typeof import('./src/components/MailListPage.vue')['default']
     MainLayout: typeof import('./src/components/MainLayout.vue')['default']
     SettingPage: typeof import('./src/components/SettingPage.vue')['default']

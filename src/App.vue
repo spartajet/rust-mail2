@@ -2,13 +2,15 @@
   <v-layout class="rounded rounded-md" style="overflow: hidden;">
 
     <v-navigation-drawer width="220" permanent style="overflow-y: hidden;"></v-navigation-drawer>
-    <v-navigation-drawer width="300" permanent style="overflow-y: hidden;"></v-navigation-drawer>
+    <v-navigation-drawer width="300" permanent style="overflow-y: hidden;">
+      <MailList></MailList>
+    </v-navigation-drawer>
     <v-app-bar height="40">
       <!-- <template v-slot:prepend>
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
       </template> -->
-      <v-sheet width="100%" height="100%" align="center" justify="center" @mousedown="title_bar_mouse_down_handle">
+      <v-sheet width="100%" height="100%" align="center" justify="center" @mousedown="title_bar_mouse_down_handle" style="overflow: hidden;">
         <v-toolbar-title style="padding-top: 7px;">Rust Mail</v-toolbar-title>
       </v-sheet>
 
@@ -32,6 +34,7 @@
 //
 import HelloWorld from "@/components/HelloWorld.vue";
 import { getCurrentWindow } from '@tauri-apps/api/window';
+import MailList from '@/components/MailList.vue'
 
 const window = getCurrentWindow();
 
