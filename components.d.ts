@@ -12,6 +12,7 @@ declare module 'vue' {
     EssentialLink: typeof import('./src/components/EssentialLink.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IndexPage: typeof import('./src/components/IndexPage.vue')['default']
+    MailCard: typeof import('./src/components/MailCard.vue')['default']
     MailDetailPage: typeof import('./src/components/MailDetailPage.vue')['default']
     MailList: typeof import('./src/components/MailList.vue')['default']
     MailListPage: typeof import('./src/components/MailListPage.vue')['default']
