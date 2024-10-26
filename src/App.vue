@@ -1,22 +1,26 @@
 <template>
-  <v-layout class="rounded rounded-md" style="overflow: hidden;">
+  <v-layout style="overflow: hidden">
+    <AccountNav></AccountNav>
 
-    <v-navigation-drawer width="220" permanent style="overflow-y: hidden;"></v-navigation-drawer>
-    <v-navigation-drawer width="300" permanent style="overflow-y: hidden;">
+    <v-navigation-drawer width="300" permanent style="overflow-y: hidden">
       <MailList></MailList>
     </v-navigation-drawer>
 
-    <v-main class="d-flex align-center justify-center" style="height: 100vh; overflow: hidden;">
-      <HelloWorld></HelloWorld>
+    <v-main
+      class="d-flex align-center justify-center"
+      style="height: 100vh; overflow: hidden"
+    >
+      <!-- <HelloWorld></HelloWorld> -->
     </v-main>
   </v-layout>
 </template>
 
 <script setup lang="ts">
 //
-import HelloWorld from "@/components/HelloWorld.vue";
+// import HelloWorld from "@/components/HelloWorld.vue";
 // import { getCurrentWindow } from '@tauri-apps/api/window';
-import MailList from '@/components/MailList.vue'
+import MailList from "@/components/MailList.vue";
+import AccountNav from "@/components/AccountNav.vue";
 
 // const window = getCurrentWindow();
 
@@ -42,7 +46,7 @@ import MailList from '@/components/MailList.vue'
 // }
 </script>
 <style>
-.window-control-btn {
+/* .window-control-btn {
   pointer-events: auto;
-}
+} */
 </style>

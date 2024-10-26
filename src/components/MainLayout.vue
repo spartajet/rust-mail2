@@ -163,7 +163,7 @@
 import { ref } from "vue";
 import SettingPage from "src/pages/SettingPage.vue";
 import AddAccount from "src/pages/AddAccount.vue";
-import MailListPage from "src/pages/MailListPage.vue";
+//import MailListPage from "src/pages/MailListPage.vue";
 
 export default {
   components: {
