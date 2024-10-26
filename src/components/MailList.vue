@@ -11,7 +11,7 @@
         height="40px"
         style="border-radius: 2px"
       >
-        <v-card-text style="padding: 2px">
+        <v-card-text style="padding: 0px">
           <v-text-field
             :loading="loading"
             append-inner-icon="mdi-magnify"
