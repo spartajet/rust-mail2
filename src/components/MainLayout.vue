@@ -246,7 +246,7 @@ export default {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
       toggleSetting() {
-        SettingRef.displayDialog = true;
+        // SettingRef.displayDialog = true;
       },
     };
   },

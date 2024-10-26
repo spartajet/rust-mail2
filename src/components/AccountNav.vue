@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer class="bg-deep-purple" expand-on-hover rail width="300" permanent>
+  <v-navigation-drawer class="bg-deep-purple" expand-on-hover rail width="250" permanent>
     <v-list>
       <v-list-item
         prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
