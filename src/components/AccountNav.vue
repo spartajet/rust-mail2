@@ -14,11 +14,11 @@
       ></v-list-item>
     </v-list>
     <v-divider :thickness="1" class="border-opacity-100"></v-divider>
-    <v-list density="compact" nav style="padding: 4px;">
+    <v-list density="compact" nav link style="padding: 4px;">
       <v-list-item
         prepend-icon="mdi-inbox-arrow-down"
         title="Inbox"
-        value="Inbox"
+        value="Inbox" @click="$router.push('/mail')"
       ></v-list-item>
       <v-list-item
         prepend-icon="mdi-account-star"
@@ -43,7 +43,7 @@
       <v-list-item
         prepend-icon="mdi-calendar-month"
         title="Calendar"
-        value="Calendar"
+        value="Calendar" @click="$router.push('/calendar')"
       ></v-list-item>
       <v-list-item
         prepend-icon="mdi-checkbox-multiple-outline"

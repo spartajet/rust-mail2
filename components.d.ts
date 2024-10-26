@@ -16,7 +16,9 @@ declare module 'vue' {
     MailDetailPage: typeof import('./src/components/MailDetailPage.vue')['default']
     MailList: typeof import('./src/components/MailList.vue')['default']
     MailListPage: typeof import('./src/components/MailListPage.vue')['default']
+    MainCalendar: typeof import('./src/components/calendar/MainCalendar.vue')['default']
     MainLayout: typeof import('./src/components/MainLayout.vue')['default']
+    MainMail: typeof import('./src/components/mails/MainMail.vue')['default']
     SettingPage: typeof import('./src/components/SettingPage.vue')['default']
     UserInfo: typeof import('./src/components/UserInfo.vue')['default']
   }

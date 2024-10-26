@@ -2,16 +2,7 @@
   <v-layout style="overflow: hidden">
     <AccountNav></AccountNav>
 
-    <v-navigation-drawer width="300" permanent style="overflow-y: hidden">
-      <MailList></MailList>
-    </v-navigation-drawer>
-
-    <v-main
-      class="d-flex align-center justify-center"
-      style="height: 100vh; overflow: hidden"
-    >
-      <!-- <HelloWorld></HelloWorld> -->
-    </v-main>
+    <router-view></router-view>
   </v-layout>
 </template>
 
@@ -19,7 +10,7 @@
 //
 // import HelloWorld from "@/components/HelloWorld.vue";
 // import { getCurrentWindow } from '@tauri-apps/api/window';
-import MailList from "@/components/MailList.vue";
+// import MailList from "@/components/MailList.vue";
 import AccountNav from "@/components/AccountNav.vue";
 
 // const window = getCurrentWindow();
