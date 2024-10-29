@@ -23,22 +23,22 @@
       <v-list-item
         prepend-icon="mdi-account-star"
         title="Starred"
-        value="Starred"
+        value="Starred" @click="$router.push('/mail/starred')"
       ></v-list-item>
       <v-list-item
         prepend-icon="mdi-flag"
         title="Flag"
-        value="Flag"
+        value="Flag" @click="$router.push('/mail/flagged')"
       ></v-list-item>
       <v-list-item
         prepend-icon="mdi-book-account"
-        title="BookAccount"
-        value="BookAccount"
+        title="Contacts"
+        value="Contacts" @click="$router.push('/contact')"
       ></v-list-item>
       <v-list-item
         prepend-icon="mdi-fountain-pen-tip"
         title="Drafts"
-        value="Drafts"
+        value="Drafts" @click="$router.push('/mail/drafts')"
       ></v-list-item>
       <v-list-item
         prepend-icon="mdi-calendar-month"
@@ -48,7 +48,7 @@
       <v-list-item
         prepend-icon="mdi-checkbox-multiple-outline"
         title="Todo"
-        value="Todo"
+        value="Todo" @click="$router.push('/todo')"
       ></v-list-item>
       <v-divider :thickness="1" class="border-opacity-100"></v-divider>
 
@@ -64,7 +64,7 @@
         <v-list-item
           prepend-icon="mdi-delete"
           title="Trash"
-          value="Trash" style="padding-top: 8px;"
+          value="Trash" style="padding-top: 8px;" @click="$router.push('/mail/trash')"
         ></v-list-item>
         <v-list-item
           prepend-icon="mdi-tune"
