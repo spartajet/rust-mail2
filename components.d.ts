@@ -20,6 +20,7 @@ declare module 'vue' {
     MainCalendar: typeof import('./src/components/calendar/MainCalendar.vue')['default']
     MainLayout: typeof import('./src/components/MainLayout.vue')['default']
     MainMail: typeof import('./src/components/mails/MainMail.vue')['default']
+    MainSetting: typeof import('./src/components/setting/MainSetting.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SettingMain: typeof import('./src/components/setting/SettingMain.vue')['default']
