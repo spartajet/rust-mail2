@@ -59,7 +59,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import MailCard from "@/components/MailCard.vue";
+import MailCard from "@/components/mails/MailCard.vue";
 
 const loaded = ref(false);
 const loading = ref(false);

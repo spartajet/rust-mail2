@@ -10,5 +10,5 @@
   </v-main>
 </template>
 <script setup lang="ts">
-import MailList from "@/components/MailList.vue";
+import MailList from "@/components/mails/MailList.vue";
 </script>

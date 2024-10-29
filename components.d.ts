@@ -8,14 +8,14 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AccountNav: typeof import('./src/components/AccountNav.vue')['default']
-    AddAccount: typeof import('./src/components/AddAccount.vue')['default']
+    AddAccount: typeof import('./src/components/setting/AddAccount.vue')['default']
     AppNav: typeof import('./src/components/AppNav.vue')['default']
     EssentialLink: typeof import('./src/components/EssentialLink.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IndexPage: typeof import('./src/components/IndexPage.vue')['default']
-    MailCard: typeof import('./src/components/MailCard.vue')['default']
-    MailDetailPage: typeof import('./src/components/MailDetailPage.vue')['default']
-    MailList: typeof import('./src/components/MailList.vue')['default']
+    MailCard: typeof import('./src/components/mails/MailCard.vue')['default']
+    MailDetailPage: typeof import('./src/components/mails/MailDetailPage.vue')['default']
+    MailList: typeof import('./src/components/mails/MailList.vue')['default']
     MailListPage: typeof import('./src/components/MailListPage.vue')['default']
     MainCalendar: typeof import('./src/components/calendar/MainCalendar.vue')['default']
     MainContact: typeof import('./src/components/contact/MainContact.vue')['default']
