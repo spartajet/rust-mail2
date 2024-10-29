@@ -11,7 +11,7 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 // import { getCurrentWindow } from '@tauri-apps/api/window';
 // import MailList from "@/components/MailList.vue";
-import AccountNav from "@/components/AccountNav.vue";
+import AccountNav from "@/components/AppNav.vue";
 
 // const window = getCurrentWindow();
 

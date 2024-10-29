@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AccountNav: typeof import('./src/components/AccountNav.vue')['default']
     AddAccount: typeof import('./src/components/AddAccount.vue')['default']
+    AppNav: typeof import('./src/components/AppNav.vue')['default']
     EssentialLink: typeof import('./src/components/EssentialLink.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IndexPage: typeof import('./src/components/IndexPage.vue')['default']
@@ -19,6 +20,9 @@ declare module 'vue' {
     MainCalendar: typeof import('./src/components/calendar/MainCalendar.vue')['default']
     MainLayout: typeof import('./src/components/MainLayout.vue')['default']
     MainMail: typeof import('./src/components/mails/MainMail.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    SettingMain: typeof import('./src/components/setting/SettingMain.vue')['default']
     SettingPage: typeof import('./src/components/SettingPage.vue')['default']
     UserInfo: typeof import('./src/components/UserInfo.vue')['default']
   }

@@ -69,7 +69,7 @@
         <v-list-item
           prepend-icon="mdi-tune"
           title="Setting"
-          value="Setting"
+          value="Setting" @click="$router.push('/setting')"
         ></v-list-item>
       </v-list>
     </template>
